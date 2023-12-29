@@ -1,0 +1,112 @@
+
+<html>
+	<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XTFM65VS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1XTFM65VS2');
+</script>
+	<meta charset=“UTF-8”>
+
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,bold,900,600">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <!-- Custom styles for this template -->
+ 		 <link href="css/custom.css" rel="stylesheet">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+		<title>Optical Lens Attack</title>
+	</head>
+	<body>
+		<div class = "global_container">
+			<div class = "section"  >		
+				<!--<img width = "800px" src="logo.png" alt="Logo">-->
+				<h1>Optical Lens Attack on Monocular Depth Estimation based Autonomous Driving </h1>
+				
+				<div class ="boxed">
+					<p> Monocular depth estimation plays a crucial role in vision-based autonomous driving (AD) systems (e.g., Tesla). It relies on a single camera image to estimate the object's depth, enabling driving decisions like stopping a few meters before a detected obstacle or changing lanes to avoid collisions. In this paper, we investigate the security risks associated with monocular vision-based depth estimation algorithms utilized in AD systems. By exploiting the vulnerability of monocular depth estimation and the principles of optical lenses, we introduce OpticalLensAttack, a physical-world attack that involves strategically placing optical lenses near the front of a car's camera to manipulate perceived object depth. OpticalLensAttack encompasses two distinct attack formats: concave lens attack and convex lens attack, each utilizing different optical lenses to induce false depth perception. We begin by constructing a mathematical model of our attack, incorporating various attack parameters. Subsequently, we simulate the attack in the digital world and assess its real-world performance in driving scenarios to showcase its impact on monocular depth estimation models. Additionally, we adopt an attack optimization method to enhance the attack accuracy. The results indicate potential security concerns associated with the proposed attacks on AD systems.
+			
+			<br>
+			<h1>Attack Experimental Setup</h1>
+				<img width = "800px" src="setup.png" alt="device">
+
+				
+				
+				
+				
+
+				
+
+				 <div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+      
+			
+ </div>
+</div>
+
+
+					
+						
+						
+						
+						
+						
+				<h1> </h1>
+					<div class ="boxed" style="margin-top=3em;">							
+						<p class="text-center"></p>
+						<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+							<div>
+									<div style = "height:10px"></div>
+						</a>
+      				
+ </div>
+</div>
+
+
+				<h1>Optical Lens Attack Demonstration</h1>
+				<div class ="boxed">
+		<p> We present the real-world driving tests using concave lens attack and convex lens attack. We also showcase the potential attack effects, i.e., car accidents and traffic jams. </p>
+				</div>
+				<h2>Attacks in Real World Driving Test</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/ZwbxMwtH15M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<h1>Physical Attacks</h1>							
+				<h2>Concave Lens Attack</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/oIjKURRDb9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<h2>Convex Lens Attack</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Li8v-ZXNpJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<h1>End-to-end System Simulation in CARLA</h1>
+					<div class ="boxed">
+		<p> We conduct closed-loop simulations involving other integral components of autonomous driving, such as prediction, planning, and control using the CARLA simulator. CARLA is an open-source simulator designed to facilitate the advancement, training, and validation of autonomous driving systems. <strong><red> Note: There are video lags happening sometimes due to the computer configuration restrictions. </red></strong> </p>
+				</div>
+						<img width = "800px" src="Carla_Workflow.png" alt="device">
+				<h2>Benign Autonomous Driving Scenario</h2>
+						<div class ="boxed">
+		<p> The video demo shows the AV fully stops right behind the fire truck. </p>	</div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/7XAXlffFtqU?si=ztyXaAtjdpYCYPJG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				
+				<h2>Autonomous Driving Scenario under Attack</h2>
+						<div class ="boxed">
+		<p> The video demo shows that the AV crashes on the front car. </p>	</div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/5Ztzhtu_6K4?si=FKIzNewVVe04zVhi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<h1>Attack Optimization</h1>
+	 <div class ="boxed">
+		<p>We present an attack optimization method that further improves the depth attack success rate by considering the factor of blurriness. The targeted attack error rate can be reduced by around 3%, and the untargeted attack distortion rate can be increased by around 10%.</p>
+	 </div>
+	<h2>Concave Attack Optimization</h2>
+				<img width = "800px" src="op_concave.png" alt="device">
+	<h2>Convex Attack Optimization</h2>
+				<img width = "800px" src="op_convex.png" alt="device">
+					</div>
+			 		</div>
+					</div>
+	
+				<div>
+	
+	</body>
+</html>
